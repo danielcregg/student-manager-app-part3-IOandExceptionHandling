@@ -1,13 +1,11 @@
 package ie.gmit.studentmanagerpackage;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-  
 
 public class StudentManager {
-    
-	// Declare a List called students to hold the student objects
+
+	// Create Student ArrayList
 	private List<Student> stuObjArrList;
 
 	// Constructor
@@ -25,14 +23,23 @@ public class StudentManager {
 		this.stuObjArrList = studentList;
 	}
 
-	// Student Add Method                   
+	// Student Add Method
 	public boolean addStudent(Student studentObject) {
-			return stuObjArrList.add(studentObject);
+
+		// Loop over all Students on list and check if new Student being added is already on List
+		for (Student stuObj : stuObjArrList) {
+			if (stuObj.getStudentId().equals(studentObject.getStudentId())) {
+				System.out.println("Student NOT added to Student List. Student already on Student List!");
+				return false;
+			}
+		}
+
+		return stuObjArrList.add(studentObject);
 	}
-	
-	// Student Add Method                   
+
+	// Student Add Method
 	public boolean removeStudent(Student studentObject) {
-			return stuObjArrList.remove(studentObject);
+		return stuObjArrList.remove(studentObject);
 	}
-	
+
 }
