@@ -20,12 +20,12 @@ public class Main {
 		StudentManager stuManObj = new StudentManager();
 		File studentCSVFile = new File("./resources/students.csv");
 		stuManObj.loadStudentsFromCSVFile(studentCSVFile);
-		System.out.println(stuManObj.findTotalStudents());	
+		stuManObj.showTotalStudents();	
 		
 		// Add one more student manually and write out all students to csv file
 		Student studentObj1 = new Student("G00123461", "Jim", 21);
-		stuManObj.addStudent(studentObj1);
-		System.out.println(stuManObj.findTotalStudents());
+		stuManObj.addStudentToList(studentObj1);
+		stuManObj.showTotalStudents();
 		stuManObj.saveStudentsToCSVFile(studentCSVFile);
 
 //		Student studentObject1 = new Student("G00123458", "Alf", 22);
