@@ -73,7 +73,7 @@ public class StudentManager {
 				String[] studentFieldValues = bufferData.split(",");
 				// System.out.println(Arrays.toString(studentFieldValues));
 				Student newStudent = new Student(studentFieldValues[0], studentFieldValues[1],
-						Integer.parseInt(studentFieldValues[3]));
+						Integer.parseInt(studentFieldValues[2]));
 				this.addStudent(newStudent); // Add student to the studentList
 			}
 			System.out.println("Loaded Students List from CSV file successfully!");
@@ -101,7 +101,7 @@ public class StudentManager {
 		try {
 			studentFileWriterStream = new FileWriter(studentDBFile);
 			bufferedstudentFileWriterStream = new BufferedWriter(studentFileWriterStream);
-			bufferedstudentFileWriterStream.write("ID,First Name,Surname,Year of Study" + "\n");
+			bufferedstudentFileWriterStream.write("ID,Firstname,Age" + "\n");
 
 			// Write out student data from studentList to buffer and flush it to CSV file
 			for (Student studentObject : stuObjArrList) {
