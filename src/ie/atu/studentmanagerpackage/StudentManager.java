@@ -1,4 +1,4 @@
-package ie.gmit.studentmanagerpackage;
+package ie.atu.studentmanagerpackage;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -72,7 +72,7 @@ public class StudentManager {
 				// System.out.println(bufferData);
 				String[] studentFieldValues = bufferData.split(",");
 				// System.out.println(Arrays.toString(studentFieldValues));
-				Student newStudent = new Student(studentFieldValues[0], studentFieldValues[1], studentFieldValues[2],
+				Student newStudent = new Student(studentFieldValues[0], studentFieldValues[1],
 						Integer.parseInt(studentFieldValues[3]));
 				this.addStudent(newStudent); // Add student to the studentList
 			}
@@ -105,8 +105,8 @@ public class StudentManager {
 
 			// Write out student data from studentList to buffer and flush it to CSV file
 			for (Student studentObject : stuObjArrList) {
-				bufferedstudentFileWriterStream.write(studentObject.getStudentId() + "," + studentObject.getFisrtName()
-						+ "," + studentObject.getSurname() + "," + studentObject.getYearOfStudy() + "\n");
+				bufferedstudentFileWriterStream.write(studentObject.getStudentId() + "," + studentObject.getFirstname()
+						 + "," + studentObject.getAge() + "\n");
 				// bufferedstudentFileWriterStream.write(studentObject.findAllFieldValuesInCSVFormat()
 				// + "\n");
 				bufferedstudentFileWriterStream.flush(); // Flushes buffer which transfers buffer data to the file

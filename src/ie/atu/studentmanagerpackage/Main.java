@@ -1,4 +1,4 @@
-package ie.gmit.studentmanagerpackage;
+package ie.atu.studentmanagerpackage;
 
 import java.io.File;
 
@@ -23,14 +23,14 @@ public class Main {
 		System.out.println(stuManObj.findTotalStudents());	
 		
 		// Add one more student manually and write out all students to csv file
-		Student studentObj1 = new Student("G00123461", "Jim", "Jones", 1);
+		Student studentObj1 = new Student("G00123461", "Jim", 21);
 		stuManObj.addStudent(studentObj1);
 		System.out.println(stuManObj.findTotalStudents());
 		stuManObj.saveStudentsToCSVFile(studentCSVFile);
 
-//		Student studentObject1 = new Student("G00123458", "Alf", "Stewart", 3);
-//		Student studentObject2 = new Student("G00123459", "Sally", "Fletcher", 4);
-//		Student studentObject3 = new Student("G00123459", "Sally", "Fletcher", 4);
+//		Student studentObject1 = new Student("G00123458", "Alf", 22);
+//		Student studentObject2 = new Student("G00123459", "Sally", 23);
+//		Student studentObject3 = new Student("G00123459", "Sally", 24);
 //
 //		addStatus = stuManObj.addStudent(studentObject1);
 //		System.out.println(addStatus);
