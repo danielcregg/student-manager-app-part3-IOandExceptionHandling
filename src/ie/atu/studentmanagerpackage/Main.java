@@ -18,7 +18,7 @@ public class Main {
 
 		// Add studnets from csv file
 		StudentManager stuManObj = new StudentManager();
-		File studentCSVFile = new File(".\\resources\\students.csv");
+		File studentCSVFile = new File("./resources/students.csv");
 		stuManObj.loadStudentsFromCSVFile(studentCSVFile);
 		System.out.println(stuManObj.findTotalStudents());	
 		
