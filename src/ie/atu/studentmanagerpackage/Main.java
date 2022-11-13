@@ -19,14 +19,14 @@ public class Main {
 		// Add studnets from csv file
 		StudentManager stuManObj = new StudentManager();
 		File studentCSVFile = new File("./resources/students.csv");
-		stuManObj.loadStudentsFromCSVFile(studentCSVFile);
+		stuManObj.readStudentsFromCSVFile(studentCSVFile);
 		stuManObj.showTotalStudents();	
 		
 		// Add one more student manually and write out all students to csv file
 		Student studentObj1 = new Student("G00123461", "Jim", 21);
 		stuManObj.addStudentToList(studentObj1);
 		stuManObj.showTotalStudents();
-		stuManObj.saveStudentsToCSVFile(studentCSVFile);
+		stuManObj.writeStudentsToCSVFile(studentCSVFile);
 
 //		Student studentObject1 = new Student("G00123458", "Alf", 22);
 //		Student studentObject2 = new Student("G00123459", "Sally", 23);
