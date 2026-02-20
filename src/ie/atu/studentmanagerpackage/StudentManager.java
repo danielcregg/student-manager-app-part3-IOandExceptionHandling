@@ -120,7 +120,7 @@ public class StudentManager {
 			return this.studentList.add(newStudent);
 		}
 		// If student details are invalid or if student is already on list return false
-		System.out.println("Student with ID" + studentId + " could not be added to list!");
+		System.out.println("Student with ID " + studentId + " could not be added to list!");
 		return false;
 	}
 
@@ -197,13 +197,13 @@ public class StudentManager {
 			}
 			System.out.println("Student data read from CSV file located at " + pathToStudentCSVFile);
 		} catch (NullPointerException npExc) {
-			System.err.println("ERROR: Students NOT saved to file!");
+			System.err.println("ERROR: Students NOT read from file!");
 			npExc.printStackTrace();
 		} catch (FileNotFoundException fnfExc) {
-			System.err.println("ERROR: Students NOT saved to file!");
+			System.err.println("ERROR: Students NOT read from file!");
 			fnfExc.printStackTrace();
 		} catch (IOException IOExc) {
-			System.err.println("ERROR: Students NOT saved to file!");
+			System.err.println("ERROR: Students NOT read from file!");
 			IOExc.printStackTrace();
 		} finally {
 			try {
